@@ -1,7 +1,5 @@
 # 現在のブランチを取得する
-branch = git branch --contains | cut -d " " -f 2
-
-echo $branch
+branch =$(git branch --contains | cut -d " " -f 2)
 
 # pull
 git pull origin $branch
