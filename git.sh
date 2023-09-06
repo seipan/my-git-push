@@ -1,5 +1,5 @@
 # 現在のブランチを取得する
-branch =$(git branch --contains | cut -d " " -f 2)
+branch =$(git branch --contains | grep -v detached | sed -e 's/^\* //g')
 
 echo $branch
 
